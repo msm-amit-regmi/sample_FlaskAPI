@@ -1,5 +1,5 @@
 # sample FlaskAPI
-This is the sample development project of creating Flask API in Python.
+This is the sample flask api development project in Python.
 
 # Installation
 pip install flask
