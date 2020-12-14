@@ -1,11 +1,8 @@
-# Flask-API-Development
+# sample FlaskAPI
 This is the sample development project of creating Flask API in Python.
 
 # Installation
 pip install flask
-
-# Introduction
-Detail specification of this sample program is in this link: https://tickets.tools.misumi.jp/confluence/display/3D2MPROJECT/3.3.3+Outer+Dimension+API+Specification
 
 # Reference
 1. https://www.flaskapi.org/
