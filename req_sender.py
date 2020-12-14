@@ -40,7 +40,7 @@ def resolve_path(path: str) -> str:
 
 
 if __name__ == "__main__":
-    path = "0024.png"
+    path = "images\sample.png"
     #path = sys.argv[1]
     #print("args1:{0}".format(sys.argv[1]))
     send_image(path)
