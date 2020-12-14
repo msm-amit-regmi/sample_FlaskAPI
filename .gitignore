@@ -1,0 +1,6 @@
+#remove vscode files
+.vscode
+__pycache__
+#remove api vscode files
+api/.vscode
+api/__pycache__

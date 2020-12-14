@@ -4,22 +4,22 @@ import logging
 import os
 import sys
 
-import app_config
-import image_convert
+import api.app_config as app_config
+import api.image_convert as image_convert
 
 import requests
 
-logging.basicConfig(filename='log/logger.log', level=logging.DEBUG)
+#logging.basicConfig(filename='log/logger.log', level=logging.DEBUG)
 
 def send_image(path: str):
     if path is None or path == "":
         raise ValueError("Illegal Argument!")
 
     file_name = os.path.basename(path)
-    enc = image_convert.encode(resolve_path(path))
+    enc = image_convert.encode((path))
     #res = requests.get("http://{0}:{1}".format(app_config.host(), app_config.port()),auth=('misumi','misumi3612'),params="amit")
     #print(res)
-    res = requests.post("http://{0}:{1}".format(app_config.host(), app_config.port()),
+    res = requests.post("http://{0}:{1}/api/v1".format(app_config.host(), app_config.port()),
                         json.dumps({"file_name": file_name, "image": enc}),
                         auth=('misumi','misumi3612'),
                         headers={"Content-Type": "application/json"})
@@ -40,7 +40,7 @@ def resolve_path(path: str) -> str:
 
 
 if __name__ == "__main__":
-    path = ".\\0755.png"
+    path = "0024.png"
     #path = sys.argv[1]
     #print("args1:{0}".format(sys.argv[1]))
     send_image(path)
