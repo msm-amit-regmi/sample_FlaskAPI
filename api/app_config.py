@@ -7,4 +7,4 @@ def host() -> str:
 
 
 def port() -> str:
-    return os.getenv("APP_PORT", 8000)
+    return os.getenv("APP_PORT", 5000)

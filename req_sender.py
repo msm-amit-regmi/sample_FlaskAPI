@@ -21,7 +21,7 @@ def send_image(path: str):
     #print(res)
     res = requests.post("http://{0}:{1}/api/v1".format(app_config.host(), app_config.port()),
                         json.dumps({"file_name": file_name, "image": enc}),
-                        auth=('misumi','misumi3612'),
+                        auth=('test','test123'),
                         headers={"Content-Type": "application/json"})
     print(res)
     logging.debug("response json: %s", res.json())
